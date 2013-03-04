@@ -19,6 +19,11 @@ NSString *const iTunesShortcut = @"iTunesShortcut";
     [self registerHotkey];
 }
 
+// in case when you try to launch app second time, its window becomes visible
+- (void)applicationWillBecomeActive:(NSNotification *)notification {
+    self.window.isVisible = YES;
+}
+
 static EventHandlerRef sEventHandler = NULL;
 
 - (OSStatus)handleHotkeys {
