@@ -43,6 +43,7 @@ static EventHandlerRef sEventHandler = NULL;
     EventHotKeyID hkid = {.signature = kShorrtSignature, .id = 1};
     EventHotKeyRef hkref;
 
+    // crtl+cmd+i
     OSStatus err = RegisterEventHotKey(34,
                                        cmdKey + controlKey,
                                        hkid,
