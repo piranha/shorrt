@@ -14,6 +14,7 @@
 		9422213B16E37AB300989A13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422213A16E37AB300989A13 /* AppDelegate.m */; };
 		9422213E16E37AB300989A13 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9422213C16E37AB300989A13 /* MainMenu.xib */; };
 		9422214516E37AC000989A13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422214416E37AC000989A13 /* Carbon.framework */; };
+		942A03EC17883F7D004E9735 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942A03EA17883F7D004E9735 /* DDHotKeyCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		9422213A16E37AB300989A13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9422213D16E37AB300989A13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9422214416E37AC000989A13 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		942A03EA17883F7D004E9735 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		942A03EB17883F7D004E9735 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 		9422212D16E37AB300989A13 /* shorrt */ = {
 			isa = PBXGroup;
 			children = (
+				942A03EA17883F7D004E9735 /* DDHotKeyCenter.m */,
+				942A03EB17883F7D004E9735 /* DDHotKeyCenter.h */,
 				9422213916E37AB300989A13 /* AppDelegate.h */,
 				9422213A16E37AB300989A13 /* AppDelegate.m */,
 				9422213C16E37AB300989A13 /* MainMenu.xib */,
@@ -172,6 +177,7 @@
 			files = (
 				9422213416E37AB300989A13 /* main.m in Sources */,
 				9422213B16E37AB300989A13 /* AppDelegate.m in Sources */,
+				942A03EC17883F7D004E9735 /* DDHotKeyCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +313,7 @@
 				9422214316E37AB300989A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

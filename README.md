@@ -1,8 +1,18 @@
 # shorrt.app
 
-This is just an app to run (or switch to) iTunes with `Ctrl+Cmd+i` hotkey.
+This is a simplest app to run some application by using hotkey. Create a config
+file `~/.shorrt` and fill it with configuration:
 
-Maybe it will become something bigger in future, but right now I'm just
-frustrated with other options and I really wanted to get something working.
+```
+ctrl-cmd-i = app: iTunes
+ctrl-cmd-' = app: Skype
+```
 
-If you want to change hotkey, fork and change source code.
+As you can see, config is really simple: you have your hotkey with modifiers
+(four of them: `ctrl`, `cmd`, `alt`, `shift`) and then action. Action has a type
+and a payload, separated by `:`. Single action is available right now: `app`.
+
+TODO:
+
+ - key sequences (chords) - no idea how to do that :( HELP WANTED!
+ - other types of action - request them!
