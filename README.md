@@ -1,7 +1,9 @@
 # shorrt.app
 
-This is a simplest app to run some application by using hotkey. Create a config
-file `~/.shorrt` and fill it with configuration:
+[Download](https://github.com/piranha/shorrt/releases/1.0/2048/shorrt.zip).
+
+This is the simplest app to run some application by using hotkey. Create a
+config file `~/.shorrt` and fill it with configuration:
 
 ```
 ctrl-cmd-i = app: iTunes
