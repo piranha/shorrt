@@ -68,18 +68,37 @@ static NSDictionary* _revKeyMapping;
 }
 
 + (unsigned short)codeByKey:(NSString *)key {
-    NSDictionary * aliases = @{@"'": @"quote",
-                               @"enter": @"return"};
+    NSDictionary * aliases = @{
+        @"=": @"equal",
+        @"-": @"minus",
+        @"]": @"rightbracket",
+        @"[": @"leftbracket",
+        @"'": @"quote",
+        @";": @"semicolon",
+        @"\\": @"backslash",
+        @",": @"comma",
+        @"/": @"slash",
+        @".": @"period",
+        @"`": @"grave",
+        @"enter": @"return"
+    };
 
     if ([aliases objectForKey:key])
         key = [aliases objectForKey:key];
 
     NSNumber * result = [ASKey keyMapping][[key lowercaseString]];
+    if (result == NULL) {
+        NSLog(@"Unknown key: %@", key);
+        return 255;
+    }
     return result.integerValue;
 }
 
 + (NSString *)keyByCode:(unsigned short)code {
-    return [ASKey revKeyMapping][[NSNumber numberWithInteger:code]];
+    NSString * key = [ASKey revKeyMapping][[NSNumber numberWithInteger:code]];
+    if (key == NULL)
+        return @"UNKNOWN_KEY";
+    return key;
 }
 
 #pragma mark Keys Definitions
@@ -289,6 +308,7 @@ static ASHotKeyCenter* center = nil;
 
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent* e) {
         ASKey* key = [ASKey fromEvent:e];
+//        NSLog(@"pressed: %@", [key stringify]);
         [_pressedKeys addObject:key];
 
         id next;
