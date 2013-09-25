@@ -1,10 +1,14 @@
 VERSION := $(shell /usr/libexec/PlistBuddy -c 'Print CFBundleVersion' shorrt/shorrt-Info.plist)
 
-default: compile
+default: $(addprefix Release/,shorrt.app shorrt.zip)
 
-compile:
+Release/shorrt.app: $(shell find shorrt shorrt.xcodeproj -type f)
 	xcodebuild CONFIGURATION_BUILD_DIR=Release > /dev/null
 
-install: compile
+Release/shorrt.zip: Release/shorrt.app
+	rm -f $@
+	cd $(@D) && zip -r $(@F) $(<F)
+
+install: Release/shorrt.app
 	rm -rf /Applications/shorrt.app
 	mv Release/shorrt.app /Applications/shorrt.app
