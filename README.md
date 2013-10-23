@@ -14,7 +14,13 @@ As you can see, config is really simple: you have your hotkey with modifiers
 (four of them: `ctrl`, `cmd`, `alt`, `shift`) and then action. Action has a type
 and a payload, separated by `:`. Single action is available right now: `app`.
 
-TODO:
+## OS X 10.9 Mavericks
+
+To make shorrt work in Mavericks, go to `System Preferences` -> `Security & Privacy`
+-> `Privacy` -> `Accessibility` and put a checkbox there for shorrt. You may
+have to run it to show up there.
+
+## TODO
 
  - key sequences (chords) - no idea how to do that :( HELP WANTED!
  - other types of action - request them!
