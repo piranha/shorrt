@@ -1,6 +1,6 @@
 # shorrt.app
 
-[Download](https://github.com/piranha/shorrt/releases/1.0/2048/shorrt.zip).
+[Download release](https://github.com/piranha/shorrt/releases)
 
 This is the simplest app to run some application by using hotkey. Create a
 config file `~/.shorrt` and fill it with configuration:
