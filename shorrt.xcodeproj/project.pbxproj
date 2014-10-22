@@ -12,9 +12,9 @@
 		9422213416E37AB300989A13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422213316E37AB300989A13 /* main.m */; };
 		9422213816E37AB300989A13 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9422213616E37AB300989A13 /* Credits.rtf */; };
 		9422213B16E37AB300989A13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422213A16E37AB300989A13 /* AppDelegate.m */; };
-		9422213E16E37AB300989A13 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9422213C16E37AB300989A13 /* MainMenu.xib */; };
 		9422214516E37AC000989A13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422214416E37AC000989A13 /* Carbon.framework */; };
 		9487348E17A7D8D000A8C8A2 /* ASHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9487348D17A7D8D000A8C8A2 /* ASHotKeyCenter.m */; };
+		949EED4E19F7AB9100CF872B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9422213C16E37AB300989A13 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,9 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949EED4E19F7AB9100CF872B /* MainMenu.xib in Resources */,
 				9422213216E37AB300989A13 /* InfoPlist.strings in Resources */,
 				9422213816E37AB300989A13 /* Credits.rtf in Resources */,
-				9422213E16E37AB300989A13 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +275,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shorrt/shorrt-Prefix.pch";
 				INFOPLIST_FILE = "shorrt/shorrt-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +288,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shorrt/shorrt-Prefix.pch";
 				INFOPLIST_FILE = "shorrt/shorrt-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

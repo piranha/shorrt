@@ -3,7 +3,7 @@ VERSION := $(shell /usr/libexec/PlistBuddy -c 'Print CFBundleVersion' shorrt/sho
 default: $(addprefix Release/,shorrt.app shorrt.zip)
 
 Release/shorrt.app: $(shell find shorrt shorrt.xcodeproj -type f)
-	xcodebuild CONFIGURATION_BUILD_DIR=Release > /dev/null
+	xcodebuild CONFIGURATION_BUILD_DIR=Release -scheme shorrt -target shorrt -configuration Release build > /dev/null
 
 Release/shorrt.zip: Release/shorrt.app
 	rm -f $@
