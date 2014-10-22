@@ -14,6 +14,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.window.isVisible = NO;
     [self parseAndProcessConfig];
+
+    NSDictionary *options = @{(__bridge id)kAXTrustedCheckOptionPrompt: @YES};
+    AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options);
 }
 
 // in case when you try to launch app second time, its window becomes visible
